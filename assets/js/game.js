@@ -16,7 +16,7 @@ var enemyAttack = 12;
 console.log(enemyNames);
 console.log(enemyNames.length);
 console.log(enemyNames[0]);
-console.log(enemyNames[3]);
+console.log(enemyNames[3]);     
 
 // create function
 var fight = function(enemyName) {
@@ -77,6 +77,9 @@ var fight = function(enemyName) {
 
 // execute function
 for(var i = 0; i < enemyNames.length; i++) {
+    if (playerHealth > 0) {
+        window.alert("Welcome to Robot Gladiators! Round " + (i + 1 ) );
+    }
     var pickedEnemyName = enemyNames[i];
     enemyHealth = 50;
     fight(pickedEnemyName);
